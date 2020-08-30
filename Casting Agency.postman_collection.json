@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "36dbdfc0-1dd2-4e2e-8e3c-902c25e7aecd",
+		"name": "Casting Agency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Executive Producer",
+			"item": [
+				{
+					"name": "/movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"hala\",\n    \"age\": 24,\n    \"gender\": \"Female\",\n    \"movie_id\": 1\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlIxOWRvRGNmak9jQThMYjFXMkFScyJ9.eyJpc3MiOiJodHRwczovL2Rldi02YjdqcTcyeC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWY0NGM2ZWEyMDc2YTcwMDY3OGU4NjhlIiwiYXVkIjoibW92aWVzIiwiaWF0IjoxNTk4Nzg5MTcyLCJleHAiOjE1OTg4NzU1NzIsImF6cCI6InU5aURwc3FaN1dqQkpVbjFBTHd1OG5jMmN1dlM2S2FHIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.QiId8ed6cD5LovVYU3q0bdLE63l2Vfh56GX-5EJMe3_Q-UnN1mk4d6JxGISRAq_Pj9LRXeiWdjjD5fqb4gYxfqjvZNnkWj34ZPkscSIQtmmXbvArDyk5TgGbWgn_fRMUs8MU68TD-e4nvztYH6tv4U8r1XhQVmEHuqWG9Yjtrl35X8h8V6YAbIkcEPAEpwDygsT2q1KnaKsa8zpuV4tozccMq4xHmSF1LaxjZ23RQQFAzcG48jtCYmyIuM2_p18X1M3nGP6q8vRWaOuvQFozdFzM_0POpwoChkAsCCXBUZiiDxXtaLrIVgKl4mwmXX_pAat9rb5ATXd1t9lhNeNBtg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1fd0e066-9b83-4c59-9caf-85107984e550",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8555e1db-5479-4f4c-be57-cb6e512de14a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Casting Director",
+			"item": [
+				{
+					"name": "/actors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"hala\",\n    \"age\": 24,\n    \"gender\": \"Female\",\n    \"movie_id\": 1\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies/1",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"movie2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/movies/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlIxOWRvRGNmak9jQThMYjFXMkFScyJ9.eyJpc3MiOiJodHRwczovL2Rldi02YjdqcTcyeC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWY0YjgzMTQ5YzUxMDYwMDZkZTE5N2YxIiwiYXVkIjoibW92aWVzIiwiaWF0IjoxNTk4Nzg4NTA3LCJleHAiOjE1OTg4NzQ5MDcsImF6cCI6InU5aURwc3FaN1dqQkpVbjFBTHd1OG5jMmN1dlM2S2FHIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyJdfQ.LPXGSXaRe6ZvbRhEU4oFHOqnUkT6_jiDCfkCEM3wuPFo3Qhzz1R6veTY9_sCaRRWyxyHOk6kyMrNyfxbIZ2k2hpUebIy733BDgRr5duc9BpJ4tjTFaYmrOcmiUZ4EEioGCCq0l_RpKuHiZl8WqHF69IId6YdSvM6K4sDkq2M1jE_PTvZJ11eExmt5EziV8pna2T57z3bpk1p8nzGPe5k8fohOKgkbDb8ZB4rvTY_tje9j53ZypvqcDCVdHQPdDxqrEbum7eRq67rpUZ2JPPbmnSiFvEK0wYz9J1aHbrsWhvMB95ru7wm_-ohbSv8hauFE2_RWzJQ9KNHLOfKUuLdrw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a1ce1103-ffde-411d-a3ac-86316a53332c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6e1e4814-055a-46b9-b2df-a8170b7c8fa9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Casting Assistant",
+			"item": [
+				{
+					"name": "/actors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"hala\",\n    \"age\": 24,\n    \"gender\": \"Female\",\n    \"movie_id\": 1\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlIxOWRvRGNmak9jQThMYjFXMkFScyJ9.eyJpc3MiOiJodHRwczovL2Rldi02YjdqcTcyeC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWY0Yjg0MGIyMDc2YTcwMDY3OGVlNmUzIiwiYXVkIjoibW92aWVzIiwiaWF0IjoxNTk4Nzg4OTQ1LCJleHAiOjE1OTg4NzUzNDUsImF6cCI6InU5aURwc3FaN1dqQkpVbjFBTHd1OG5jMmN1dlM2S2FHIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyJdfQ.OTJFvJOlwVik5xcgXRg8U4us1zf_WJs27GmeG7DPoyHAHcWz2tt3M5k-wPqImN2a1OrxRME9Z5cVI0RXkGF-L17ts4ncXARtNe5b_lWDAVhmiqT4p-EkjSl6WAkLsZsIjM530U2YHI8L0StLujZXoLuulSNfBovmzdsU_oibitMIWNxXx1D3Kkp12eSahCVcI6NPRKtSmBhdSBCdg1TYtjf1eg_1BPnNdWpTjB1URHO6qjphhT-0w4QmAWzpOaFT5CzQv7HpftGVjXOTscOlVwPbICuX-ho8qL37Eq2NCDEYaoN6YodcxA_bjhsi8VhpgrVlN569_CClasjBym7nmw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "970c6a77-810c-4aae-afb8-122ddb7665c2",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "71fda01c-631f-4918-8d60-7bb65e68726d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3d19b830-ced8-4967-a2a8-6b463530bae4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "20d655ab-1cbe-479c-a39d-ddf0f4316a8b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "6f14d465-caf4-41f8-9a5a-2f048bd142b1",
+			"key": "host",
+			"value": "https://casting-agency-05.herokuapp.com"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

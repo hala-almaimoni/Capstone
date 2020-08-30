@@ -18,7 +18,7 @@ To run the application run the following commands:
 python3 app.py
 ```
 These commands put the application in development and use the `app.py` file in our starter folder. Working in development mode shows an interactive debugger in the console and restarts the server whenever changes are made.
-The application is run on http://0.0.0.0:8080/ .
+The application is run on http://0.0.0.0:8080/ and production url is https://casting-agency-05.herokuapp.com/.
 
 ## Tests
 In order to run tests navigate to the starter folder and run the following commands:
@@ -33,7 +33,7 @@ The first time you run the tests, omit the dropdb command.
 GET /movies
 * General:
     * Returns a list of movies objects and success value.
-* Sample: curl http://0.0.0.0:8080/movies
+* Sample: curl https://casting-agency-05.herokuapp.com/movies
 ```
   {
     "movies": [
@@ -54,7 +54,7 @@ GET /movies
 GET /actors
 * General:
     * Returns a list of actor objects and success value.
-* Sample: curl http://0.0.0.0:8080/actors
+* Sample: curl https://casting-agency-05.herokuapp.com/actors
 ```
 {
     "actors": [
@@ -80,7 +80,7 @@ GET /actors
 POST /movies
  * General:
     * Creates a new movie using the submitted title and release date. Returns the success value and the created movie.
- * curl http://0.0.0.0:8080/movies -X POST -H "Content-Type: application/json" -d '{"title":"seven", "release_date":"2020-06-11"}'
+ * curl https://casting-agency-05.herokuapp.com/movies -X POST -H "Content-Type: application/json" -d '{"title":"seven", "release_date":"2020-06-11"}'
  ```
  {
     "movies": {
@@ -94,7 +94,7 @@ POST /movies
 POST /actors
  * General:
     * Creates a new actor using the submitted name, age, gender, and movie_id. Returns the success value and the created actor.
- * curl http://0.0.0.0:8080/actors -X POST -H "Content-Type: application/json" -d '{"name":"hala", "age":24, "gender":"Female", "movie_id": 1}'
+ * curl https://casting-agency-05.herokuapp.com/actors -X POST -H "Content-Type: application/json" -d '{"name":"hala", "age":24, "gender":"Female", "movie_id": 1}'
  ```
  {
     "actors": {
@@ -110,7 +110,7 @@ POST /actors
   DELETE /movies/{movie_id} 
  * General:
     * Deletes the movie of the given ID if it exists. Returns the success value and movie ID.
-* curl -X DELETE http://0.0.0.0:8080/movies/1
+* curl -X DELETE https://casting-agency-05.herokuapp.com/movies/1
 ```
  {
     "delete": 1,
@@ -120,7 +120,7 @@ POST /actors
   DELETE /actors/{actor_id} 
  * General:
     * Deletes the actor of the given ID if it exists. Returns the success value and actor ID.
-* curl -X DELETE http://0.0.0.0:8080/actors/1
+* curl -X DELETE https://casting-agency-05.herokuapp.com/actors/1
 ```
  {
     "delete": 1,
@@ -130,7 +130,7 @@ POST /actors
   PATCH /movies/1
 * General:
     * Update the movie of the given ID using the submitted title or release date. Returns object of the updated movie and success value.
-* curl http://0.0.0.0:8080/movies/1 -X POST -H "Content-Type: application/json" -d '{"title":"kidnap"}' 
+* curl https://casting-agency-05.herokuapp.com/movies/1 -X POST -H "Content-Type: application/json" -d '{"title":"kidnap"}' 
  ```
 {
     "movies": {
@@ -144,7 +144,7 @@ POST /actors
   PATCH /actors/1
 * General:
     * Update the actor of the given ID using the submitted name, age, gender or movie_id. Returns object of the updated actor and success value.
-* curl http://0.0.0.0:8080/actors/1 -X POST -H "Content-Type: application/json" -d '{"name":"Noura"}' 
+* curl https://casting-agency-05.herokuapp.com/actors/1 -X POST -H "Content-Type: application/json" -d '{"name":"Noura"}' 
  ```
  {
     "actors": {
