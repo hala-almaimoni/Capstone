@@ -3,11 +3,12 @@ from flask import request, _request_ctx_stack, abort
 from functools import wraps
 from jose import jwt
 from urllib.request import urlopen
+import os
 
 
-AUTH0_DOMAIN = 'dev-6b7jq72x.us.auth0.com'
-ALGORITHMS = ['RS256']
-API_AUDIENCE = 'movies'
+AUTH0_DOMAIN = os.environ['AUTH0_DOMAIN']
+ALGORITHMS = os.environ['ALGORITHMS']
+API_AUDIENCE = os.environ['API_AUDIENCE']
 
 ## AuthError Exception
 '''
@@ -23,7 +24,7 @@ class AuthError(Exception):
 ## Auth Header
 
 '''
-@TODO implement get_token_auth_header() method
+implement get_token_auth_header() method
     it should attempt to get the header from the request
         it should raise an AuthError if no header is present
     it should attempt to split bearer and the token
@@ -61,7 +62,7 @@ def get_token_auth_header():
     return token
 
 '''
-@TODO implement check_permissions(permission, payload) method
+implement check_permissions(permission, payload) method
     @INPUTS
         permission: string permission (i.e. 'post:drink')
         payload: decoded jwt payload
@@ -86,7 +87,7 @@ def check_permissions(permission, payload):
     return True
 
 '''
-@TODO implement verify_decode_jwt(token) method
+implement verify_decode_jwt(token) method
     @INPUTS
         token: a json web token (string)
 
@@ -96,7 +97,6 @@ def check_permissions(permission, payload):
     it should validate the claims
     return the decoded payload
 
-    !!NOTE urlopen has a common certificate error described here: https://stackoverflow.com/questions/50236117/scraping-ssl-certificate-verify-failed-error-for-http-en-wikipedia-org
 '''
 def verify_decode_jwt(token):
     jsonurl = urlopen(f'https://{AUTH0_DOMAIN}/.well-known/jwks.json')
@@ -152,7 +152,7 @@ def verify_decode_jwt(token):
             }, 400)
 
 '''
-@TODO implement @requires_auth(permission) decorator method
+implement @requires_auth(permission) decorator method
     @INPUTS
         permission: string permission (i.e. 'post:drink')
 
